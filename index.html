@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style> body {margin:0;}
+}
+#navbar {
+  overflow: hidden;
+  background-color: #7c1d1d;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #e01616;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/*old next button*/
+/*#next {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 33px 22px;
+  text-decoration: none;
+  font-size: 33px;
+}*/
+  </style>
+  <style> 
+/*Box of txt*/
+div.box{
+    background-color: lightgrey;
+    width: 1200px;
+    border: 10px solid blue;
+    padding: 25px;
+    margin: 120px;
+    position: center;
+  </style>
+	<title>Sams's Snappy Lube</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="Style.css">
+  <script type = "text/javascript">
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "Pics/building.jpg";
+          images[1] = "Pics/Pennzoil.jpg";
+          images[2] = "Pics/SSL.jpg";
+      </script>
+</head>
+<div id="navbar">
+  <a class="active" href="index.html">Home</a>
+  <a href="Services.html">Services</a>
+  <a href="SnappyService.html">Snappy Service</a>
+  <a href="Coupons.html">Coupons</a>
+  <a href="FleetServices.html">Snappy Fleet</a>
+  <a href="Contact.html">Contact</a>
+  </div>
+
+  <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+<body onload = "startTimer()">
+  <img src="Pics/SSL.jpg" align="center">
+ <!-- Container -->
+
+
+
+
+
+ 
+  <div class="w3-container">
+
+   <h1>Sam's Snappy Lube</h1>
+   <img id="img" src="Pics/building.jpg" style="max-width:40%" />
+       <button type="button" onclick="displayPreviousImage()">Previous</button>
+       <button type="button" onclick="displayNextImage()">Next</button>
+   <img src="Pics/building.jpg" style="max-width:40%" align="left">
+  <img src="Pics/Pennzoil.jpg" >
+</div>
+ 
+</body>
+</html>
