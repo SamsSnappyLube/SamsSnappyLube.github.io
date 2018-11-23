@@ -8,14 +8,28 @@ padding: 0;
 }
 
 .w3-container {
-	background-color: white;
+	background-color: #b3b3b3;
     margin-left: auto;
     margin-right: auto;
     width: 988px;
-    height: 988px;
+    
     
 }
+
 h1.pos_left {
     position: relative;
     bottom: 300px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+}
+.SS{
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	width: 988px;
+}
+button{
+	color: red;
+	background-color: orange;
 }
